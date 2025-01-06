@@ -19,10 +19,10 @@ importers:
         version: 4.15.0(vue@3.5.13(typescript@5.7.2))(zod@3.24.1)
       '@vercel/analytics':
         specifier: ^1.4.1
-        version: 1.4.1(vue@3.5.13(typescript@5.7.2))
+        version: 1.4.1(vue-router@4.5.0(vue@3.5.13(typescript@5.7.2)))(vue@3.5.13(typescript@5.7.2))
       '@vercel/speed-insights':
         specifier: ^1.1.0
-        version: 1.1.0(vue@3.5.13(typescript@5.7.2))
+        version: 1.1.0(vue-router@4.5.0(vue@3.5.13(typescript@5.7.2)))(vue@3.5.13(typescript@5.7.2))
       '@vueuse/core':
         specifier: ^11.1.0
         version: 11.3.0(vue@3.5.13(typescript@5.7.2))
@@ -56,6 +56,9 @@ importers:
       vue:
         specifier: ^3.5.12
         version: 3.5.13(typescript@5.7.2)
+      vue-router:
+        specifier: ^4.5.0
+        version: 4.5.0(vue@3.5.13(typescript@5.7.2))
       zod:
         specifier: ^3.23.8
         version: 3.24.1
@@ -596,6 +599,9 @@ packages:
 
   '@vue/compiler-vue2@2.7.16':
     resolution: {integrity: sha512-qYC3Psj9S/mfu9uVi5WvNZIzq+xnXMhOwbTFKKDD7b1lhpnn71jXSFdTQ+WsIEk0ONCd7VV2IMm7ONl6tbQ86A==}
+
+  '@vue/devtools-api@6.6.4':
+    resolution: {integrity: sha512-sGhTPMuXqZ1rVOk32RylztWkfXTRhuS7vgAKv0zjqk8gbsHkJ7xfFf+jbySxt7tWObEJwyKaHMikV/WGDiQm8g==}
 
   '@vue/devtools-api@7.6.8':
     resolution: {integrity: sha512-ma6dY/sZR36zALVsV1W7eC57c6IJPXsy8SNgZn1PLVWU4z4dPn5TIBmnF4stmdJ4sQcixqKaQ8pwjbMPzEZwiA==}
@@ -1486,6 +1492,11 @@ packages:
       vue:
         optional: true
 
+  vue-router@4.5.0:
+    resolution: {integrity: sha512-HDuk+PuH5monfNuY+ct49mNmkCRK4xJAV9Ts4z9UFc4rzdDnxQLyCMGGc8pKhZhHTVzfanpNwB/lwqevcBwI4w==}
+    peerDependencies:
+      vue: ^3.2.0
+
   vue-tsc@2.2.0:
     resolution: {integrity: sha512-gtmM1sUuJ8aSb0KoAFmK9yMxb8TxjewmxqTJ1aKphD5Cbu0rULFY6+UQT51zW7SpUcenfPUuflKyVwyx9Qdnxg==}
     hasBin: true
@@ -1889,13 +1900,15 @@ snapshots:
     transitivePeerDependencies:
       - vue
 
-  '@vercel/analytics@1.4.1(vue@3.5.13(typescript@5.7.2))':
+  '@vercel/analytics@1.4.1(vue-router@4.5.0(vue@3.5.13(typescript@5.7.2)))(vue@3.5.13(typescript@5.7.2))':
     optionalDependencies:
       vue: 3.5.13(typescript@5.7.2)
+      vue-router: 4.5.0(vue@3.5.13(typescript@5.7.2))
 
-  '@vercel/speed-insights@1.1.0(vue@3.5.13(typescript@5.7.2))':
+  '@vercel/speed-insights@1.1.0(vue-router@4.5.0(vue@3.5.13(typescript@5.7.2)))(vue@3.5.13(typescript@5.7.2))':
     optionalDependencies:
       vue: 3.5.13(typescript@5.7.2)
+      vue-router: 4.5.0(vue@3.5.13(typescript@5.7.2))
 
   '@vitejs/plugin-vue@5.2.1(vite@5.4.11(@types/node@20.17.12)(terser@5.37.0))(vue@3.5.13(typescript@5.7.2))':
     dependencies:
@@ -1948,6 +1961,8 @@ snapshots:
     dependencies:
       de-indent: 1.0.2
       he: 1.2.0
+
+  '@vue/devtools-api@6.6.4': {}
 
   '@vue/devtools-api@7.6.8':
     dependencies:
@@ -2848,6 +2863,11 @@ snapshots:
       watchpack: 2.4.2
       webpack: 5.97.1
     optionalDependencies:
+      vue: 3.5.13(typescript@5.7.2)
+
+  vue-router@4.5.0(vue@3.5.13(typescript@5.7.2)):
+    dependencies:
+      '@vue/devtools-api': 6.6.4
       vue: 3.5.13(typescript@5.7.2)
 
   vue-tsc@2.2.0(typescript@5.7.2):
