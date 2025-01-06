@@ -13,9 +13,13 @@ import Community from "./components/Community.vue";
 import Contact from "./components/Contact.vue";
 import FAQ from "./components/FAQ.vue";
 import Footer from "./components/Footer.vue";
+import { Analytics } from '@vercel/analytics/vue';
+import { SpeedInsights } from '@vercel/speed-insights/vue';
 </script>
 
 <template>
+  <Analytics />
+  <SpeedInsights />
   <Navbar />
   <Hero />
   <Sponsors />
