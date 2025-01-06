@@ -48,12 +48,12 @@ const FAQList: FAQProps[] = [
 <template>
   <section
     id="faq"
-    class="container md:w-[700px] py-24 sm:py-32"
+    class="py-24 sm:py-32 md:w-[700px] container"
   >
-    <div class="text-center mb-8">
-      <h2 class="text-lg text-primary text-center mb-2 tracking-wider">FAQS</h2>
+    <div class="mb-8 text-center">
+      <h2 class="mb-2 text-center text-lg text-primary tracking-wider">FAQS</h2>
 
-      <h2 class="text-3xl md:text-4xl text-center font-bold">
+      <h2 class="font-bold text-3xl text-center md:text-4xl">
         Common Questions
       </h2>
     </div>
@@ -74,17 +74,13 @@ const FAQList: FAQProps[] = [
       </AccordionItem>
     </Accordion>
 
-    <h3 class="font-medium mt-4">
+    <h3 class="mt-4 font-medium">
       Still have questions?
       <a
         href="#"
-        class="text-muted-foreground"
+        class="text-muted-foreground underline"
       >
-        <a
-          href="#"
-          class="underline"
-          >Contact us</a
-        >
+        Contact us
       </a>
     </h3>
   </section>
